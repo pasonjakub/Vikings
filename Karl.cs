@@ -31,17 +31,17 @@ namespace VikingsImproved
             AttackDMG = 10;
             Arrows = 100;
         }
-        override public string Fight(IBattleProperties battleProperties)
+        override public double Fight(IBattleProperties battleProperties)
         {
             if (battleProperties.HP > 0 && Arrows > 0)
             {
                 double damageDealt = AttackDMG * (battleProperties.Defense / 100);
                 battleProperties.HP -= damageDealt;
                 Arrows--;
-                return $"Damage dealt {damageDealt}, left {battleProperties.HP} HP";
+                return damageDealt;
             }
             else
-                return $"{battleProperties.Type} has no health and is dead";
+                return -1;
         }
     }
     class BoatBuilder : Karl

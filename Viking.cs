@@ -11,16 +11,16 @@ namespace VikingsImproved
         public double Defense { get; set; }
         public double AttackDMG { get; set; }
         public string Type { get; set; } 
-        virtual public string Fight(IBattleProperties battleProperties)
+        virtual public double Fight(IBattleProperties battleProperties)
         {
             if (battleProperties.HP > 0)
             {
                 double damageDealt = AttackDMG * (battleProperties.Defense / 100);
                 battleProperties.HP -= damageDealt;
-                return $"Damage dealt {damageDealt}, left {battleProperties.HP} HP";
+                return damageDealt;
             }
             else
-                return $"{battleProperties.Type} has no health and is dead";
+                return -1;
         }
     }
 }
