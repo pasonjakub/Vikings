@@ -6,5 +6,4 @@ The task was to design UML diagram for a chosen topic. The requirements were as 
   * comments when it is not obvious
 
 
-![VikingsImproved](https://user-images.githubusercontent.com/45394303/113001815-75e1db00-9171-11eb-98a1-5e6ebc112ec7.png)
-
+![VikingsImproved](https://user-images.githubusercontent.com/45394303/113009289-1a671b80-9178-11eb-89da-c63356a92b13.png)
